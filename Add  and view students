@@ -1,0 +1,39 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        ArrayList<String> students = new ArrayList<>();
+
+        System.out.println("=== Student Management System ===");
+        System.out.println("1. Add Student");
+        System.out.println("2. View Students");
+        System.out.println("3. Exit");
+
+        System.out.print("Enter your choice: ");
+        int choice = sc.nextInt();
+        sc.nextLine();
+
+        if (choice == 1) {
+            System.out.print("Enter student name: ");
+            String name = sc.nextLine();
+
+            students.add(name);
+            System.out.println("Student added successfully!");
+        }
+        else if (choice == 2) {
+            System.out.println("Student List: " + students);
+        }
+        else if (choice == 3) {
+            System.out.println("Thank you!");
+        }
+        else {
+            System.out.println("Invalid choice!");
+        }
+
+        sc.close();
+    }
+}
